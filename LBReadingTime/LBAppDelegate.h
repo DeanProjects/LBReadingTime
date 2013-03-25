@@ -13,7 +13,6 @@
 @interface LBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) LBViewController *viewController;
 
 @end

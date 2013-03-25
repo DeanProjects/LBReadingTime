@@ -18,6 +18,8 @@
 		9FFB7B0116EF8AD10098CB60 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FFB7B0016EF8AD10098CB60 /* Default-568h@2x.png */; };
 		9FFB7B0416EF8AD10098CB60 /* LBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB7B0316EF8AD10098CB60 /* LBViewController.m */; };
 		9FFB7B0716EF8AD10098CB60 /* LBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFB7B0516EF8AD10098CB60 /* LBViewController.xib */; };
+		9FFB7B1216EF8B170098CB60 /* LBReadingTimeScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB7B0F16EF8B170098CB60 /* LBReadingTimeScrollPanel.m */; };
+		9FFB7B1316EF8B170098CB60 /* UITextView+ReadingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB7B1116EF8B170098CB60 /* UITextView+ReadingTime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		9FFB7B0216EF8AD10098CB60 /* LBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBViewController.h; sourceTree = "<group>"; };
 		9FFB7B0316EF8AD10098CB60 /* LBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBViewController.m; sourceTree = "<group>"; };
 		9FFB7B0616EF8AD10098CB60 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LBViewController.xib; sourceTree = "<group>"; };
+		9FFB7B0E16EF8B170098CB60 /* LBReadingTimeScrollPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBReadingTimeScrollPanel.h; sourceTree = "<group>"; };
+		9FFB7B0F16EF8B170098CB60 /* LBReadingTimeScrollPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBReadingTimeScrollPanel.m; sourceTree = "<group>"; };
+		9FFB7B1016EF8B170098CB60 /* UITextView+ReadingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+ReadingTime.h"; sourceTree = "<group>"; };
+		9FFB7B1116EF8B170098CB60 /* UITextView+ReadingTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ReadingTime.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		9FFB7AF016EF8AD10098CB60 /* LBReadingTime */ = {
 			isa = PBXGroup;
 			children = (
+				9FFB7B0D16EF8B170098CB60 /* ReadingTime */,
 				9FFB7AF916EF8AD10098CB60 /* LBAppDelegate.h */,
 				9FFB7AFA16EF8AD10098CB60 /* LBAppDelegate.m */,
 				9FFB7B0216EF8AD10098CB60 /* LBViewController.h */,
@@ -105,6 +112,17 @@
 				9FFB7B0016EF8AD10098CB60 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FFB7B0D16EF8B170098CB60 /* ReadingTime */ = {
+			isa = PBXGroup;
+			children = (
+				9FFB7B0E16EF8B170098CB60 /* LBReadingTimeScrollPanel.h */,
+				9FFB7B0F16EF8B170098CB60 /* LBReadingTimeScrollPanel.m */,
+				9FFB7B1016EF8B170098CB60 /* UITextView+ReadingTime.h */,
+				9FFB7B1116EF8B170098CB60 /* UITextView+ReadingTime.m */,
+			);
+			path = ReadingTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +195,8 @@
 				9FFB7AF716EF8AD10098CB60 /* main.m in Sources */,
 				9FFB7AFB16EF8AD10098CB60 /* LBAppDelegate.m in Sources */,
 				9FFB7B0416EF8AD10098CB60 /* LBViewController.m in Sources */,
+				9FFB7B1216EF8B170098CB60 /* LBReadingTimeScrollPanel.m in Sources */,
+				9FFB7B1316EF8B170098CB60 /* UITextView+ReadingTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +319,7 @@
 				9FFB7B0C16EF8AD10098CB60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
