@@ -2,6 +2,7 @@ LBReadingTime
 =============
 
 UIScrollView indicator's panel showing the remaing reading time.
+![image](https://raw.github.com/lukabernardi/LBReadingTime/master/screenshot_remaining_time.png)
 
 This component is inspired by [iA blog](http://informationarchitects.net/blog/) and use some code from the [Florian Mielke's article about scroll indicator panel](http://blog.madefm.com/post/13817640556/ios-devcorner-attaching-an-info-panel-to-a)
 
