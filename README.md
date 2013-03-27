@@ -1,7 +1,7 @@
 LBReadingTime
 =============
 
-UIScrollView indicator's panel showing the remaing reading time.
+UITextView indicator's panel showing the remaing reading time. Check out the component in action on [this video](https://www.youtube.com/watch?v=0G071OifGbU).
 
 ![image](https://raw.github.com/lukabernardi/LBReadingTime/master/screenshot_remaining_time.png)
 
