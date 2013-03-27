@@ -24,11 +24,14 @@ Follow the instructions on the CocoaPods site to [install the gem](https://githu
 
 Usage
 =====
+You can use this component to show to your user how long will take to read a text or tho costantly show the remaining reading time while the user scroll in your UITextView.
 
 This componet is made up of two main classes namely `UITextView+ReadingTime` and `LBReadingTimeScrollPanel`. 
 
 The first one is a UITextView's category that enable the count of remaining reading time. It can be used independently for programmatically obtain the reading time. This category swizzle a UITextView method in order to know when the text changes and add some associated object, this is done at `+load:` but for actually start the counting you should set the property `enableReadingTime` to `YES`. This is done because counting the word introduce a slight overhead, therefor be sure to enable it only if you need it.
 You can also customize the value of Words per Minute via the property `wordsPerMinute`, by default this value is set to 200 words per minute (According to [http://en.wikipedia.org/wiki/Words_per_minute](http://en.wikipedia.org/wiki/Words_per_minute)).
+
+If you want to simply know the total reading time or the reamaining reading time you can use the properties `readingTime` and `remainingReadingTime`. Both returns the time in minute, is so little precise and all the computations are rounded cause doens't make sense to be precise at seconds in this kind of calcualtions. Consider this more like a guess than a perfect measure.
 
 `LBReadingTimeScrollPanel`, instead, is the view that is attached to the `UIScrollView`'s indicator. In order to work correctly you should set this view as your `UITextView` delegate or also forward the delegate call to the view. This view resize itself automatically to match the label width.
 
@@ -41,6 +44,21 @@ The usage is pretty simple:
 		self.scrollPanel = [[LBReadingTimeScrollPanel alloc] initWithFrame:CGRectZero];
 		self.textView.enableReadingTime = YES;
 		self.textView.delegate = self.scrollPanel;
+4. If your class need to be the UITextView delegate be sure to forward the delegate's message call to the `LBReadingTimeScrollPanel` instance:
+		- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+		{
+		    [self.scrollPanel scrollViewWillBeginDragging:scrollView];
+		}
+		
+		- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+		{
+		    [self.scrollPanel scrollViewDidScroll:scrollView];
+		}
+		
+		- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+		{
+		    [self.scrollPanel scrollViewDidEndScrollingAnimation:scrollView];
+		}
     
     
 If you need to localize or change the message in your .string file make an entry for the string `NSLocalizedString(@"%d min left", nil)`.
