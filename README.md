@@ -1,7 +1,7 @@
 LBReadingTime
 =============
 
-UITextView indicator's panel showing the remaing reading time. Check out the component in action on [this video](https://www.youtube.com/watch?v=0G071OifGbU).
+LBReadingTime is a UITextView's category to compute the total reading time or remaining reading and UITextView indicator's panel showing the remaing reading time. Check out the component in action on [this video](https://www.youtube.com/watch?v=0G071OifGbU).
 
 ![image](https://raw.github.com/lukabernardi/LBReadingTime/master/screenshot_remaining_time.png)
 
