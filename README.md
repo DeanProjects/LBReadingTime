@@ -7,6 +7,20 @@ UITextView indicator's panel showing the remaing reading time. Check out the com
 
 This component is inspired by [iA blog](http://informationarchitects.net/blog/) and use some code from the [Florian Mielke's article about scroll indicator panel](http://blog.madefm.com/post/13817640556/ios-devcorner-attaching-an-info-panel-to-a)
 
+Installation
+=====
+The preferred way to install is by using CocoaPods, but you can alway copy the files.
+
+## Copy file
+This code must be used with deploy target 5.0+ and under ARC. 
+If your code doesn't use ARC you can [mark this source with the compiler flag](http://www.codeography.com/2011/10/10/making-arc-and-non-arc-play-nice.html) `-fobjc-arc` 
+
+- Just grab the file in the folder named ReadingTime and drag them into your project
+
+## CocoaPods
+
+You can use [CocoaPods](http://cocoapods.org) to manage your dependencies and install *LBReadingTime*.
+Follow the instructions on the CocoaPods site to [install the gem](https://github.com/CocoaPods/CocoaPods#installation) and add `pod 'LBReadingTime', :git => 'https://github.com/lukabernardi/LBReadingTime.git'` to your *Podfile*.
 
 Usage
 =====
@@ -29,7 +43,7 @@ The usage is pretty simple:
 		self.textView.delegate = self.scrollPanel;
     
     
- If you need to localize or change the message in your .string file make an entry for the string `NSLocalizedString(@"%d min left", nil)`.
+If you need to localize or change the message in your .string file make an entry for the string `NSLocalizedString(@"%d min left", nil)`.
  
 Stay in touch
 ============
